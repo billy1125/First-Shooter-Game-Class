@@ -202,8 +202,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 5
+  jumpForce: 10
+  jumpCooldown: 1
+  groundDrag: 0
   jumpKey: 32
   PlayerCamera: {fileID: 963194228}
+  playerHeight: 2
+  whatIsGround:
+    serializedVersion: 2
+    m_Bits: 64
+  grounded: 0
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -407,7 +415,7 @@ GameObject:
   - component: {fileID: 902902478}
   - component: {fileID: 902902477}
   - component: {fileID: 902902476}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Plane
   m_TagString: Untagged
   m_Icon: {fileID: 0}
