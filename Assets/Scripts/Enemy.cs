@@ -36,7 +36,7 @@ public class Enemy : MonoBehaviour
         else
             navMeshAgent.enabled = false;
 
-        faceTarget(); // 將敵人一直正面面對角色，因為敵人和角色位置會變化，所以要不斷Update
+        
 
         // 判斷式：如果生命數值低於0，則讓敵人消失
         if (lifeAmount <= 0.0f)
@@ -47,6 +47,8 @@ public class Enemy : MonoBehaviour
     {
         if (navMeshAgent.enabled)
             navMeshAgent.SetDestination(targetObject.transform.position);    // 讓自己往目標物的座標移動   
+
+        faceTarget(); // 將敵人一直正面面對角色，因為敵人和角色位置會變化，所以要不斷Update
     }
 
     // 碰撞偵測
